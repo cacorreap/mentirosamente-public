@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Descargar Mentirosamente — ¿Quién miente mejor?</title>
+  <meta name="description" content="Descarga Mentirosamente para Android. El juego social donde gana quien miente mejor." />
+
+  <!-- Open Graph (para que se vea bien al compartir el link) -->
+  <meta property="og:title" content="Mentirosamente — ¿Quién miente mejor?" />
+  <meta property="og:description" content="Descarga el juego para Android." />
+  <meta property="og:image" content="assets/icon.png" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="assets/icon.png" />
+  <style>
+    :root {
+      --bg: #0d0d1a;
+      --card: #161625;
+      --primary: #ff4757;
+      --secondary: #00d2ff;
+      --text: #f0f0f5;
+      --text-secondary: #8888a0;
+      --muted: #55556a;
+      --border: #2a2a40;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: radial-gradient(1200px 600px at 50% -10%, #1a1a30 0%, var(--bg) 60%);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+    .wrap { max-width: 620px; margin: 0 auto; padding: 56px 24px 80px; }
+    header { text-align: center; }
+    .icon {
+      width: 112px; height: 112px; border-radius: 26px;
+      box-shadow: 0 12px 40px rgba(0,0,0,.5);
+      border: 1px solid var(--border);
+    }
+    .logo { font-size: 38px; font-weight: 900; letter-spacing: 3px; margin-top: 22px; }
+    .logo .accent { color: var(--primary); display: block; margin-top: -8px; }
+    .tag { color: var(--text-secondary); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-top: 14px; }
+
+    .cta { margin: 40px 0 14px; text-align: center; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 12px;
+      background: var(--primary); color: #fff; text-decoration: none;
+      font-size: 18px; font-weight: 800; letter-spacing: .3px;
+      padding: 18px 34px; border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(255,71,87,.35);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 38px rgba(255,71,87,.45); }
+    .btn svg { width: 22px; height: 22px; }
+    .meta { text-align: center; color: var(--muted); font-size: 13px; letter-spacing: .5px; }
+    .meta b { color: var(--text-secondary); font-weight: 600; }
+
+    .note {
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 14px 18px; margin: 28px 0; font-size: 14px; color: var(--text-secondary);
+    }
+    .note b { color: var(--text); }
+
+    h2 { font-size: 17px; margin: 40px 0 14px; color: var(--secondary); }
+    ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; }
+    ol.steps li {
+      counter-increment: s; position: relative;
+      background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+      padding: 16px 18px 16px 58px; margin-bottom: 12px; font-size: 15px;
+    }
+    ol.steps li::before {
+      content: counter(s); position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--secondary); color: #06121a; font-weight: 800;
+      display: grid; place-items: center; font-size: 14px;
+    }
+    ol.steps li b { color: var(--text); }
+
+    footer {
+      text-align: center; color: var(--muted); font-size: 13px;
+      margin-top: 56px; border-top: 1px solid var(--border); padding-top: 24px;
+    }
+    footer a { color: var(--text-secondary); }
+    a { color: var(--secondary); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="icon" src="assets/icon.png" alt="Icono de Mentirosamente" />
+      <div class="logo">MENTIROSA<span class="accent">MENTE</span></div>
+      <div class="tag">¿Quién miente mejor?</div>
+    </header>
+
+    <div class="cta">
+      <a class="btn" href="https://github.com/cacorreap/mentirosamente-public/releases/latest/download/mentirosamente.apk" download>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
+        Descargar para Android
+      </a>
+    </div>
+    <p class="meta">APK · Android · <b>v1.0.0</b> · ~85&nbsp;MB</p>
+
+    <div class="note">
+      📱 <b>Solo Android por ahora.</b> Si tienes iPhone, la versión para iOS aún
+      no está disponible.
+    </div>
+
+    <h2>Cómo instalarlo</h2>
+    <ol class="steps">
+      <li>Toca <b>"Descargar para Android"</b> y espera a que termine la descarga del archivo <b>.apk</b>.</li>
+      <li>Ábrelo. Android te pedirá permiso para <b>instalar apps de esta fuente</b>: actívalo y vuelve atrás.</li>
+      <li>Si aparece un aviso de <b>Play Protect</b>, toca <b>"Instalar de todas formas"</b>. Es normal en apps fuera de la Play Store.</li>
+      <li>¡Listo! Abre <b>Mentirosamente</b> y a jugar. 🎭</li>
+    </ol>
+
+    <footer>
+      Mentirosamente — Creado por César Correa<br />
+      <a href="privacy.html">Política de privacidad</a>
+    </footer>
+  </div>
+</body>
+</html>
