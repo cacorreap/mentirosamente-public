@@ -4,11 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Descargar Mentirosamente — ¿Quién miente mejor?</title>
-  <meta name="description" content="Descarga Mentirosamente para Android. El juego social donde gana quien miente mejor." />
+  <meta name="description" content="Mentirosamente, el party game social donde gana quien miente mejor. Sé tester en Google Play o descarga el APK para Android." />
 
   <!-- Open Graph (para que se vea bien al compartir el link) -->
   <meta property="og:title" content="Mentirosamente — ¿Quién miente mejor?" />
-  <meta property="og:description" content="Descarga el juego para Android." />
+  <meta property="og:description" content="Sé tester de la versión para Android o descarga el APK." />
   <meta property="og:image" content="assets/icon.png" />
   <meta property="og:type" content="website" />
 
@@ -44,9 +44,17 @@
     .logo .accent { color: var(--primary); display: block; margin-top: -8px; }
     .tag { color: var(--text-secondary); font-size: 14px; letter-spacing: 2px; text-transform: uppercase; margin-top: 14px; }
 
-    .cta { margin: 40px 0 14px; text-align: center; }
+    .badge {
+      display: inline-block; margin: 36px 0 0; padding: 6px 14px; border-radius: 999px;
+      background: rgba(0,210,255,.1); border: 1px solid rgba(0,210,255,.35);
+      color: var(--secondary); font-size: 12px; font-weight: 700; letter-spacing: 1.5px;
+    }
+    .hero-title { font-size: 24px; font-weight: 900; margin: 16px 0 8px; text-align: center; }
+    .lead { color: var(--text-secondary); font-size: 15px; text-align: center; margin: 0 0 8px; }
+
+    .cta { margin: 26px 0 14px; text-align: center; }
     .btn {
-      display: inline-flex; align-items: center; gap: 12px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 12px;
       background: var(--primary); color: #fff; text-decoration: none;
       font-size: 18px; font-weight: 800; letter-spacing: .3px;
       padding: 18px 34px; border-radius: 16px;
@@ -55,16 +63,24 @@
     }
     .btn:hover { transform: translateY(-2px); box-shadow: 0 14px 38px rgba(255,71,87,.45); }
     .btn svg { width: 22px; height: 22px; }
+    .btn-ghost {
+      background: transparent; color: var(--text);
+      border: 1px solid var(--border); box-shadow: none; font-size: 16px; padding: 15px 28px;
+    }
+    .btn-ghost:hover { box-shadow: none; border-color: var(--secondary); }
+
     .meta { text-align: center; color: var(--muted); font-size: 13px; letter-spacing: .5px; }
     .meta b { color: var(--text-secondary); font-weight: 600; }
 
     .note {
       background: var(--card); border: 1px solid var(--border); border-radius: 14px;
-      padding: 14px 18px; margin: 28px 0; font-size: 14px; color: var(--text-secondary);
+      padding: 14px 18px; margin: 22px 0; font-size: 14px; color: var(--text-secondary);
     }
     .note b { color: var(--text); }
+    .note.review { border-color: rgba(255,193,71,.4); background: rgba(255,193,71,.08); }
 
-    h2 { font-size: 17px; margin: 40px 0 14px; color: var(--secondary); }
+    h2 { font-size: 17px; margin: 44px 0 14px; color: var(--secondary); }
+
     ol.steps { list-style: none; counter-reset: s; padding: 0; margin: 0; }
     ol.steps li {
       counter-increment: s; position: relative;
@@ -72,12 +88,22 @@
       padding: 16px 18px 16px 58px; margin-bottom: 12px; font-size: 15px;
     }
     ol.steps li::before {
-      content: counter(s); position: absolute; left: 16px; top: 50%; transform: translateY(-50%);
+      content: counter(s); position: absolute; left: 16px; top: 22px;
       width: 28px; height: 28px; border-radius: 50%;
       background: var(--secondary); color: #06121a; font-weight: 800;
       display: grid; place-items: center; font-size: 14px;
     }
     ol.steps li b { color: var(--text); }
+    .step-btn {
+      display: inline-block; margin-top: 10px; text-decoration: none;
+      background: rgba(0,210,255,.12); border: 1px solid rgba(0,210,255,.4);
+      color: var(--secondary); font-weight: 700; font-size: 14px;
+      padding: 9px 16px; border-radius: 10px;
+    }
+    .step-btn:hover { background: rgba(0,210,255,.2); }
+    .substep { color: var(--text-secondary); font-size: 13.5px; margin-top: 4px; }
+
+    .divider { text-align: center; color: var(--muted); font-size: 13px; letter-spacing: 1px; margin: 40px 0 8px; }
 
     footer {
       text-align: center; color: var(--muted); font-size: 13px;
@@ -93,32 +119,67 @@
       <img class="icon" src="assets/icon.png" alt="Icono de Mentirosamente" />
       <div class="logo">MENTIROSA<span class="accent">MENTE</span></div>
       <div class="tag">¿Quién miente mejor?</div>
+      <div class="badge">PRUEBA CERRADA · GOOGLE PLAY</div>
     </header>
 
+    <h1 class="hero-title">🎮 Sé tester y ayúdame a lanzarlo</h1>
+    <p class="lead">Estoy por publicar <b>Mentirosamente</b> en Google Play y
+    necesito testers. Sumate en 3 pasos y jugá la versión oficial:</p>
+
+    <h2>Cómo ser tester (Android)</h2>
+    <ol class="steps">
+      <li>
+        <b>Unite al grupo de testers</b>
+        <div class="substep">Con tu cuenta de Google → tocá "Unirse al grupo".</div>
+        <a class="step-btn" href="https://groups.google.com/g/mentirosamente-testers" target="_blank" rel="noopener">1. Unirme al grupo →</a>
+      </li>
+      <li>
+        <b>Activá tu acceso de tester</b>
+        <div class="substep">Tocá "Convertirme en verificador / Become a tester".</div>
+        <a class="step-btn" href="https://play.google.com/apps/testing/com.mentirosamente.app" target="_blank" rel="noopener">2. Activar acceso →</a>
+      </li>
+      <li>
+        <b>Instalá desde Google Play</b>
+        <div class="substep">Abrí la ficha y tocá "Instalar".</div>
+        <a class="step-btn" href="https://play.google.com/store/apps/details?id=com.mentirosamente.app" target="_blank" rel="noopener">3. Abrir en Play Store →</a>
+      </li>
+    </ol>
+
+    <div class="note review">
+      ⏳ <b>En revisión:</b> Google está revisando la primera versión. <b>Unite al
+      grupo ya</b> (paso 1) — vas a poder instalar apenas se apruebe (suele tardar
+      1-3 días). Si el paso 3 dice "App not available", esperá un poco y reintentá.
+    </div>
+
+    <div class="note">
+      🔑 <b>Importante:</b> usá la <b>misma cuenta de Google</b> en los 3 pasos y en
+      tu teléfono. <b>Solo Android</b> por ahora (iOS aún no disponible).
+    </div>
+
+    <div class="divider">— ¿NO QUERÉS ESPERAR? —</div>
+
+    <h2>Descarga directa (APK)</h2>
+    <p class="lead">Jugá ya mismo sin pasar por Play. (No suma a la prueba, pero
+    funciona igual.)</p>
     <div class="cta">
-      <a class="btn" href="https://github.com/cacorreap/mentirosamente-public/releases/latest/download/mentirosamente.apk" download>
+      <a class="btn btn-ghost" href="https://github.com/cacorreap/mentirosamente-public/releases/latest/download/mentirosamente.apk" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
-        Descargar para Android
+        Descargar APK
       </a>
     </div>
     <p class="meta">APK · Android · <b>v1.0.0</b> · ~85&nbsp;MB</p>
 
-    <div class="note">
-      📱 <b>Solo Android por ahora.</b> Si tienes iPhone, la versión para iOS aún
-      no está disponible.
-    </div>
-
-    <h2>Cómo instalarlo</h2>
-    <ol class="steps">
-      <li>Toca <b>"Descargar para Android"</b> y espera a que termine la descarga del archivo <b>.apk</b>.</li>
-      <li>Ábrelo. Android te pedirá permiso para <b>instalar apps de esta fuente</b>: actívalo y vuelve atrás.</li>
-      <li>Si aparece un aviso de <b>Play Protect</b>, toca <b>"Instalar de todas formas"</b>. Es normal en apps fuera de la Play Store.</li>
-      <li>¡Listo! Abre <b>Mentirosamente</b> y a jugar. 🎭</li>
+    <ol class="steps" style="margin-top:18px">
+      <li>Tocá <b>"Descargar APK"</b> y esperá a que baje el archivo <b>.apk</b>.</li>
+      <li>Abrilo. Android te pedirá permiso para <b>instalar apps de esta fuente</b>: activalo y volvé atrás.</li>
+      <li>Si aparece <b>Play Protect</b>, tocá <b>"Instalar de todas formas"</b>. Es normal fuera de la Play Store.</li>
+      <li>¡Listo! Abrí <b>Mentirosamente</b> y a jugar. 🎭</li>
     </ol>
 
     <footer>
       Mentirosamente — Creado por César Correa<br />
-      <a href="privacy.html">Política de privacidad</a>
+      <a href="privacy.html">Política de privacidad</a> ·
+      <a href="eliminar-datos.html">Eliminación de datos</a>
     </footer>
   </div>
 </body>
