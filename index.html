@@ -162,9 +162,9 @@
     <p class="lead">Jugá ya mismo sin pasar por Play. (No suma a la prueba, pero
     funciona igual.)</p>
     <div class="cta">
-      <a class="btn btn-ghost" href="https://github.com/cacorreap/mentirosamente-public/releases/latest/download/mentirosamente.apk" download>
+      <a class="btn btn-ghost" href="javascript:void(0)" onclick="dlApk()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><path d="m7 12 5 5 5-5"/><path d="M5 21h14"/></svg>
-        Descargar APK
+        🔒 Descargar APK
       </a>
     </div>
     <p class="meta">APK · Android · <b>v1.0.0</b> · ~85&nbsp;MB</p>
@@ -182,5 +182,17 @@
       <a href="eliminar-datos.html">Eliminación de datos</a>
     </footer>
   </div>
+  <script>
+    // Descarga de acceso anticipado: pide contraseña antes de bajar el APK.
+    // Cambia el valor de PASS por la contraseña que quieras compartir.
+    function dlApk() {
+      var PASS = "familia";
+      var t = prompt("Acceso anticipado. Escribe la contraseña:");
+      if (t === null) return;
+      if (t !== PASS) { alert("Contraseña incorrecta."); return; }
+      window.location.href =
+        "https://github.com/cacorreap/mentirosamente-public/releases/latest/download/mentirosamente.apk";
+    }
+  </script>
 </body>
 </html>
